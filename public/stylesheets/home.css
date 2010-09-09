@@ -1,0 +1,58 @@
+#wsw-steps li {
+	list-style-type:decimal;
+	margin-bottom:20px;
+}
+.wsw-image-wrapper {
+	text-align:center;
+}
+#wsw-url, #wsw-selector {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display:block;
+	font-size:26px;
+	padding:6px;
+	width:100%;
+}
+.wsw-error {
+	border:2px solid #f00;
+}
+#wsw-help {
+	display:none;
+}
+#wsw-preview-table {
+	width:100%;
+}
+#wsw-preview-table td {
+	width:50%;
+}
+#wsw-code {
+	border:solid #ccc;
+	border-width:1px;
+	font-family: "Courier New" Courier monospace;
+	height:200px;
+	overflow:auto;
+	width:800px;
+}
+#wsw-preview {
+	border:solid #ccc 1px;
+	height:200px;
+	overflow:auto;
+}
+#wsw-for-real {
+	display:none;
+}
+#wsw-submit {
+	background:#777;
+	border:none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display:block;
+	color:#fff;
+	cursor:pointer;
+	font-size:32px;
+	margin-top:12px;
+	padding:12px;
+	width:100%;
+}

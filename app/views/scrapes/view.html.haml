@@ -1,0 +1,21 @@
+= content_for :styles do
+  %link(rel="stylesheet" type="text/css" href="/stylesheets/view.css")
+%ul#wsw-info
+  %li
+    url: 
+    %span#wsw-url #{@scrape.url}
+  %li
+    selector:
+    %span#wsw-selector #{@scrape.selector}
+  %li
+    embeddable:
+    %textarea#wsw-code
+      &= '<iframe src="'
+      = url_for(:action => 'get', :controller => 'scrapes', :id => @scrape.uid, :only_path => false)
+      &= '"></iframe>'
+  %li
+    paste the above code in the place you'd like it to appear on your site. it acts like any other iframe so add styles, attributes, and events to the iframe tag however you'd like.
+  %li
+    %strong save or bookmark this link! or be sure to save the embed code!
+    once you navigate away from this page, the only way back to it is via a direct url.
+  %a(href="/") &laquo; another widget?!

@@ -1,0 +1,13 @@
+#wsw-info {
+	padding-top:20px;
+}
+#wsw-info li {
+	margin-bottom:20px;
+}
+#wsw-url, #wsw-selector {
+	font-size:26px;
+}
+#wsw-code {
+	display:block;
+	width:100%;
+}

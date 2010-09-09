@@ -1,0 +1,3 @@
+web scrape widget allows you to enter a url, enter a css or xpath selector, and then embed the content of that url at that selector on another page using an iframe. web scrape widget uses hpricot, it's essentially a wrapper that allows you to do simple hpricot search and then embed the results somewhere.  the search is performed everytime the content is loaded, so whatever is embeded will always match the original site it's from.
+
+this is a side project built on rails and just for fun.

@@ -1,0 +1,49 @@
+= content_for :styles do
+  %link(rel="stylesheet" type="text/css" href="/stylesheets/home.css")
+= content_for :scripts do
+  %script(type="text/javascript" src="/javascripts/scrapes/home.js")
+%div there's gotta be some way to embed the tour dates from that band's website on my page, there's gotta be some way to embed some content from this page (while making sure I correctly attribute this page and am sure not to claim the content as my own) - there is! web scrape widget! you can embed videos, you embed twitter updates, why not embed whatever you want from wherever you want?
+%br
+%form(id="wsw-widget-form" method="post" action="/scrapes/create")
+  %input(type="hidden" name="authenticity_token" value=form_authenticity_token)
+  %ol#wsw-steps
+    %li
+      %label
+        %div enter the url of the site that has the content you'd like to widget-ize
+        %input(type="text" id="wsw-url" name="url")
+    %li
+      %label
+        %div
+          enter the css or xpath selector for the content you'd like to widget-ize
+          %a(href="#" id="wsw-help-link") help
+        %input(type="text" id="wsw-selector" name="selector")
+      %div#wsw-help
+        %div
+          open the page that you'd like to scrape and open your favorite html development tool (firefox's firebug, chrome's inspector, ie7 dev toolbar, etc) or just view source, then find the content you'd like to scrape.
+        %div.wsw-image-wrapper
+          %img(src="/images/browsers.jpg")
+        %div 
+          figure out the best way to reach that content using css or xpath selectors. web scrape widget uses 
+          %a(href="http://hpricot.com/" target="_blank")hpricot
+          it's an awesome tool and they have some great demos to help you get started with defining css/xpath selectors. also, 
+          %a(href="http://google.com" target="_blank")google
+        %div.wsw-image-wrapper
+          %img(src="/images/hpricot-small.png")
+    %li
+      %a(href="#" id="wsw-update") preview
+      your selector and be sure you're scraping the content you want - code is shown below and a new window is opened with the code as it looks in a browser, but if your popup blocker is on, you probably won't see the new window
+      %table#wsw-preview-table
+        %tr
+          %th code:
+          -#%th preview:
+        %tr
+          %td
+            %div#wsw-code
+          -#%td
+            -#%div#wsw-preview
+    %li
+      widget-ize. this will create a widget that you can place on your web site that will retrieve content found by the selector provided at the url provided.
+      %a(id="wsw-for-real-link" href="#") for real?
+      %div#wsw-for-real
+        for real! but a widget could be anything, it could even be a boat. you know how much we've always wanted one of those! web scrape widget saves the url and selctor and provides you with a link to a page that displays the content of that selector at that url (phew!). so in other words, embed the iframe with the web scrape widget url on your site, and you'll always see whatever's on that other page under that selector on your page.
+      %input(id="wsw-submit" type="submit" value="widget-ize!")

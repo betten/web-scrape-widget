@@ -1,0 +1,6 @@
+log/*.log
+tmp/**/*
+*.log
+*.sqlite
+*.sqlite3
+*.sql
